@@ -1,0 +1,162 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+
+body picture{
+    position: absolute;
+}
+
+.pattern-top{
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+}
+
+.pattern-bottom{
+    bottom: 0;
+    right: 0;
+
+    z-index: -2;
+}
+
+.container{
+    background-color: rgba(0, 0, 255, 0.253);
+    max-width: 900px;
+    display: grid;
+    grid-template-areas: 
+        "header ratings"
+        "feedback feedback";
+    grid-template-columns: 35rem 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 20px;
+
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.5em;
+}
+.header .title{
+    color: var(--CardAndTittle);
+    font-size: 5rem;
+}
+.header p{
+    color: var(--ParagraphColor);
+    margin-top: 2rem;
+}
+
+.ratings{
+    align-items: end;
+    /* align-content: center; */
+    justify-self: end;
+}
+.rating-card{
+    background-color: var(--Ocuppation);
+    padding: 16px 30px;
+    margin: 20px 0;
+
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.rating-card::before{
+    content: '';
+    display: inline-block;
+    background: url(../images/icon-star.svg) space center;
+    width: 100px;
+    height: 16px;
+    margin-right: 20px;
+}
+
+.rating-card:first-child{
+    position: relative;
+    right: 80px;
+}
+
+.rating-card:nth-child(2){
+    position: relative;
+    right: 40px;
+}
+
+.card{
+    background-color: var(--CardAndTittle);
+    max-width: 350px;
+    padding: 40px 30px;
+    border-radius: 10px;
+    position: absolute;
+
+    color: var(--RatingCard);
+}
+.card:first-child{
+    position: relative;
+    /* bottom: 20px; */
+}
+.card:nth-child(2){
+    position: relative;
+    margin: 0 20px;
+    top: 20px;
+}
+.card:last-child{
+    position: relative;
+    top: 40px;
+}
+
+.card-header{
+    display: flex;
+    align-items: center;
+}
+.card-profile-photo{
+    display: block;
+    width: 40px;
+    border-radius: 50%;
+}
+.profile-info{
+    padding-left: 20px;
+}
+.profile-info .name{
+    font-size: 1.5em;
+}
+.profile-info .ocupation{
+    color: var(--Ocuppation);
+    font-weight: 300;
+}
+
+.review{
+    padding-top: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* GRID CONFIG */
+
+.header{
+    grid-area: header;
+}
+
+.ratings{
+    grid-area: ratings;
+}
+
+.feedback{
+    grid-area: feedback;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* FOOTER */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
