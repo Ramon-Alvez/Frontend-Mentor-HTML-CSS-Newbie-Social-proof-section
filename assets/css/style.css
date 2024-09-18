@@ -1,8 +1,8 @@
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,162 +12,165 @@ body{
     overflow: hidden;
 }
 
-body picture{
-    position: absolute;
+:root {
+    --CardAndTittle: hsl(300, 43%, 22%);
+    --RatingCard: hsl(300, 24%, 96%);
+    --Occuppation: hsl(333, 80%, 67%);
+
+    --FontSize: 15px;
+    --ParagraphColor: hsl(303, 10%, 53%);
 }
 
-.pattern-top{
+/* Background Patterns Position */
+.pattern-top,
+.pattern-bottom {
+    position: absolute;
+}
+.pattern-top {
     top: 0;
     left: 0;
 
     z-index: -1;
 }
-
-.pattern-bottom{
-    bottom: -100px;
+.pattern-bottom {
+    bottom: 0rem;
     right: 0;
 
     z-index: -2;
 }
 
-.container{
-    max-width: 1000px;
+/* Main stylization */
+.container {
+    max-width: 110rem;
     display: grid;
     grid-template-areas: 
         "header ratings"
         "feedback feedback";
     grid-template-columns: 35rem 1fr;
-    grid-template-rows: 25rem 1fr;
-    margin: 0 20px;
-    padding: 20px;
+    grid-template-rows: fit-content fit-content;
+    padding: 2rem;
 
     font-family: "League Spartan", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
-.header .title{
+.header .title {
     color: var(--CardAndTittle);
     font-size: 5rem;
 }
-.header p{
+.header p {
     color: var(--ParagraphColor);
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
 
 /* RATING STYLIZATION */
-.ratings{
+.ratings {
+    display: flex;
     justify-self: end;
+    align-self: flex-end;
 
     color: var(--CardAndTittle);
     font-weight: 700;
 }
-.rating-card{
+.rating-card {
     background-color: var(--RatingCard);
-    padding: 16px 30px;
-    margin: 20px 0;
+    padding: 1.6rem 3rem;
+    margin: 2rem 0;
+    border-radius: 1rem;
 
-    border-radius: 10px;
     display: flex;
     align-items: center;
+    position: relative;
 }
-.rating-card::before{
+.rating-card::before {
     content: '';
     display: inline-block;
     background: url(../images/icon-star.svg) space center;
-    width: 100px;
-    height: 16px;
-    margin-right: 20px;
+    width: 10rem;
+    height: 1.6rem;
+    margin-right: 2rem;
+}
+.rating-card:first-child {
+    right: 8rem;
 }
 
-.rating-card:first-child{
-    position: relative;
-    right: 80px;
-}
-
-.rating-card:nth-child(2){
-    position: relative;
-    right: 40px;
+.rating-card:nth-child(2) {
+    right: 4rem;
 }
 
 
 /* CARD STYLIZATION */
 
-.card{
+.card {
     background-color: var(--CardAndTittle);
-    max-width: 350px;
-    padding: 40px 30px;
-    border-radius: 10px;
-    position: absolute;
+    max-width: 33rem;
+    padding: 4rem 3rem;
+    border-radius: 1rem;
+    position: relative;
 
     color: var(--RatingCard);
 }
-.card:first-child{
-    position: relative;
-    /* bottom: 20px; */
+.card:nth-child(2) {
+    top: 2rem;
 }
-.card:nth-child(2){
-    position: relative;
-    margin: 0 20px;
-    top: 20px;
+.card:last-child {
+    top: 4rem;
 }
-.card:last-child{
-    position: relative;
-    top: 40px;
-}
-
-.card-header{
+.card-header {
     display: flex;
     align-items: center;
 }
-.card-profile-photo{
+.card-profile-photo {
     display: block;
-    width: 40px;
+    width: 4rem;
     border-radius: 50%;
 }
-.profile-info{
-    padding-left: 20px;
+.profile-info {
+    padding-left: 2rem;
 }
-.profile-info .name{
-    font-size: 1.5em;
+.profile-info .name {
+    font-size: 1.5rem;
 }
-.profile-info .ocupation{
-    color: var(--Ocuppation);
+.profile-info .occupation {
+    color: var(--Occuppation);
     font-weight: 300;
 }
+.review {
+    padding-top: 3rem;
 
-.review{
-    padding-top: 30px;
+    text-align: left;
     font-weight: 500;
     line-height: 1.5;
 }
 
 /* GRID CONFIG */
 
-.header{
+.header {
     grid-area: header;
 }
 
-.ratings{
+.ratings {
     grid-area: ratings;
 }
 
-.feedback{
+.feedback {
     grid-area: feedback;
 
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
 }
 
 
 /* FOOTER */
 
-footer{
-    margin-top: 50px;
+footer {
+    margin-top: 5rem;
 }
 .attribution {
-    font-size: 11px;
+    font-size: 1.1rem;
     text-align: center;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+    text-decoration: none;
 }
