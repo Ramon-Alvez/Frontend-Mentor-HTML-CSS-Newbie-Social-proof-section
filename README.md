@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links 💻
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/-html5-e-css-12-newbie-social-proof-section-fDheb1sq1R)
+- Live Site URL: [Live Site](https://ramon-alvez.github.io/Frontend-Mentor-HTML-CSS-Newbie-Social-proof-section/)
 
 ## My process ✒
 
@@ -107,14 +107,15 @@ Here are some code snippets that I was proud of:
     padding: 4rem 3rem;
     border-radius: 1rem;
     position: relative;
+    margin-top: 5rem;
 
     color: var(--RatingCard);
 }
 .card:nth-child(2) {
-    top: 2rem;
+    top: 1.5rem;
 }
 .card:last-child {
-    top: 4rem;
+    top: 3rem;
 }
 ```
 

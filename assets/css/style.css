@@ -55,7 +55,7 @@ body {
 }
 .header .title {
     color: var(--CardAndTittle);
-    font-size: 5rem;
+    font-size: 5.5rem;
 }
 .header p {
     color: var(--ParagraphColor);
@@ -107,14 +107,15 @@ body {
     padding: 4rem 3rem;
     border-radius: 1rem;
     position: relative;
+    margin-top: 5rem;
 
     color: var(--RatingCard);
 }
 .card:nth-child(2) {
-    top: 2rem;
+    top: 1.5rem;
 }
 .card:last-child {
-    top: 4rem;
+    top: 3rem;
 }
 .card-header {
     display: flex;
