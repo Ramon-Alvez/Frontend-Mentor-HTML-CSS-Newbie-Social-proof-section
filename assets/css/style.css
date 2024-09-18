@@ -5,9 +5,11 @@ html{
 body{
     min-height: 100vh;
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    overflow: hidden;
 }
 
 body picture{
@@ -22,22 +24,22 @@ body picture{
 }
 
 .pattern-bottom{
-    bottom: 0;
+    bottom: -100px;
     right: 0;
 
     z-index: -2;
 }
 
 .container{
-    background-color: rgba(0, 0, 255, 0.253);
-    max-width: 900px;
+    max-width: 1000px;
     display: grid;
     grid-template-areas: 
         "header ratings"
         "feedback feedback";
     grid-template-columns: 35rem 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 25rem 1fr;
     margin: 0 20px;
+    padding: 20px;
 
     font-family: "League Spartan", sans-serif;
     font-size: 1.5em;
@@ -51,13 +53,16 @@ body picture{
     margin-top: 2rem;
 }
 
+
+/* RATING STYLIZATION */
 .ratings{
-    align-items: end;
-    /* align-content: center; */
     justify-self: end;
+
+    color: var(--CardAndTittle);
+    font-weight: 700;
 }
 .rating-card{
-    background-color: var(--Ocuppation);
+    background-color: var(--RatingCard);
     padding: 16px 30px;
     margin: 20px 0;
 
@@ -83,6 +88,9 @@ body picture{
     position: relative;
     right: 40px;
 }
+
+
+/* CARD STYLIZATION */
 
 .card{
     background-color: var(--CardAndTittle);
@@ -153,6 +161,9 @@ body picture{
 
 /* FOOTER */
 
+footer{
+    margin-top: 50px;
+}
 .attribution {
     font-size: 11px;
     text-align: center;
